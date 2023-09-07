@@ -7,8 +7,8 @@ export default {
     },
 
     methods: {
-        buildingImagePath(imageName) {
-            const imageURL = new URL('../assets/img/' + imageName, import.meta.url);
+        buildingImagePath() {
+            const imageURL = new URL('../assets/img/' + this.image, import.meta.url);
             console.log(imageURL);
 
             return imageURL.href;
@@ -19,5 +19,5 @@ export default {
 
 
 <template>
-    <img :src="buildingImagePath(image)" alt="">
+    <img :src="buildingImagePath()" alt="">
 </template>
